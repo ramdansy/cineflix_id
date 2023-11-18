@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "338593832425",
+    "project_id": "cineflix-id",
+    "storage_bucket": "cineflix-id.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:338593832425:android:37c96a3189905cfe4abf78",
+        "android_client_info": {
+          "package_name": "com.ramdansy.cineflix_id"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY3H84KVHS6VsK41lBov_e2WjuOMohc5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
