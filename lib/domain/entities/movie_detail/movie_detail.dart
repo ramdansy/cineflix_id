@@ -14,6 +14,7 @@ abstract class MovieDetail with _$MovieDetail {
     required double voteAverage,
     required List<String> genres,
   }) = _MovieDetail;
+  
   factory MovieDetail.fromJSON(Map<String, dynamic> json) => MovieDetail(
         id: json['id'],
         title: json['title'],
