@@ -12,8 +12,16 @@ class CreateTransaction
 
   @override
   Future<Result<void>> call(CreateTransactionParam param) async {
+    int transactionTime = DateTime.now().millisecondsSinceEpoch;
+
     var result = await _transactionRepository.createTransaction(
-        transaction: param.transaction);
+      transaction: param.transaction.copyWith(
+        transactionTime: transactionTime,
+        id: (param.transaction.id == null)
+            ? 'cnflx-$transactionTime-${param.transaction.uid}'
+            : param.transaction.id,
+      ),
+    );
 
     return switch (result) {
       Success(value: _) => const Result.success(null),
