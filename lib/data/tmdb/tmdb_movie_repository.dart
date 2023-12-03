@@ -15,7 +15,7 @@ class TmdbMovieRepository implements MovieRepository {
     'accept': 'application/json'
   });
 
-  TmdbMovieRepository({required Dio? dio}) : _dio = dio ?? Dio();
+  TmdbMovieRepository({Dio? dio}) : _dio = dio ?? Dio();
 
   @override
   Future<Result<List<Actor>>> getActor({required int id}) async {

@@ -8,8 +8,7 @@ import 'package:cloud_firestore/cloud_firestore.dart' as firestore;
 class FirebaseTransactioRepository implements TransactionRepository {
   final firestore.FirebaseFirestore _firebaseFirestore;
 
-  FirebaseTransactioRepository(
-      {required firestore.FirebaseFirestore? firebaseFirestore})
+  FirebaseTransactioRepository({firestore.FirebaseFirestore? firebaseFirestore})
       : _firebaseFirestore =
             firebaseFirestore ?? firestore.FirebaseFirestore.instance;
 

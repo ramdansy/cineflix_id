@@ -1,9 +1,9 @@
+import 'package:cineflix_id/presentation/providers/usecases/login/login_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../domain/usecases/login/login.dart';
 import '../../../domain/usecases/login/login_params.dart';
-import '../../providers/usecases/login_provider.dart';
 import '../main_page/main_page.dart';
 
 class LoginPage extends ConsumerWidget {
@@ -20,7 +20,8 @@ class LoginPage extends ConsumerWidget {
             onPressed: () {
               Login login = ref.watch(loginProvider);
 
-              login(LoginParams(email: 'ramdan@yopmail.com', password: '123456'))
+              login(LoginParams(
+                      email: 'ramdan@yopmail.com', password: '123456'))
                   .then((result) {
                 if (result.isSuccess) {
                   Navigator.of(context).push(MaterialPageRoute(
