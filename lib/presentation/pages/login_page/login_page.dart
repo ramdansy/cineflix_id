@@ -1,3 +1,4 @@
+import 'package:cineflix_id/presentation/misc/extensions/build_context_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -15,8 +16,7 @@ class LoginPage extends ConsumerWidget {
           ref.read(routerProvider).goNamed('main');
         }
       } else if (next is AsyncError) {
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text(next.error.toString())));
+        context.showSnackBar(next.error.toString());
       }
     });
 
